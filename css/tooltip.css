@@ -1,0 +1,50 @@
+.tip-conf {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.tippy-box[data-theme~='violet-theme'] {
+    border-radius: 0px;
+    background-color: var(--dark-violet-color);
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.tippy-box[data-theme~='violet-theme'][data-placement^='top']>.tippy-arrow::before {
+    border-top-color: var(--dark-violet-color);
+}
+
+.tippy-box[data-theme~='violet-theme'][data-placement^='bottom']>.tippy-arrow::before {
+    border-bottom-color: var(--dark-violet-color);
+}
+
+.tippy-box[data-theme~='violet-theme'][data-placement^='left']>.tippy-arrow::before {
+    border-left-color: var(--dark-violet-color);
+}
+
+.tippy-box[data-theme~='violet-theme'][data-placement^='right']>.tippy-arrow::before {
+    border-right-color: var(--dark-violet-color);
+}
+
+.tip-path-bck-anim {
+    transition-property: fill, stroke;
+    transition-timing-function: ease-in-out;
+    transition-duration: .15s;
+}
+
+.tip-conf:hover .tip-path-bck-anim,
+.tip-conf:focus-visible .tip-path-bck-anim {
+    fill: #D1A9F0;
+}
+
+.tip-conf:active .tip-path-icn-anim {
+    fill: #fff;
+}
+
+.tip-conf:active .tip-path-bck-anim {
+    fill: var(--dark-violet-color);
+    stroke: var(--dark-violet-color);
+}

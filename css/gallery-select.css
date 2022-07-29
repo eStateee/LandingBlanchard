@@ -1,0 +1,119 @@
+.gal-choices {
+    border-radius: 6px;
+    width: 400px;
+    box-sizing: border-box;
+    transition: background .15s ease-in-out;
+}
+
+.gal-choices__inner {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    box-sizing: border-box;
+    padding: 0;
+    min-height: auto;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    padding-left: 15px;
+}
+
+.gal-choices__list {
+    padding: 0;
+    width: 100%;
+}
+
+.is-open .gal-choices__inner {
+    border-radius: 6px;
+}
+
+.choices[data-type*=select-one] .gal-choices__inner {
+    padding-bottom: 0;
+}
+
+.gal-choices__list.choices__list--dropdown .choices__item.is-selected {
+    display: none;
+}
+
+.gal-choices:hover,
+.gal-choices:focus-visible {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.gal-choices__item--selectable {
+    color: white;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 400;
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+
+.gal-choices__item--choice {
+    background: transparent;
+    border-bottom: 1px solid #999999;
+    margin-top: -1px;
+    transition: background .15s ease-in-out;
+}
+
+.gal-choices__item--choice:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.gal-choices__item--selectable:last-child {
+    border: 0;
+}
+
+.gal-choices__list.choices__list--dropdown {
+    width: 398px;
+    margin-top: 1px;
+    padding: 0;
+    background: #000;
+    border: 1px solid #999999;
+    border-radius: 6px;
+}
+
+.gal-choices__list.choices__list--dropdown .choices__item {
+    padding: 0;
+    padding-left: 15px;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.choices[data-type*=select-one]:after {
+    background-image: url('../svg/select-arrow.svg');
+    border: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 10px;
+    width: 10px;
+    transition: transform .1s ease-in-out;
+    top: 55%;
+}
+
+.choices[data-type*=select-one].is-open:after {
+    margin-top: 0;
+    transform: rotate(180deg) translateY(6px);
+    background-image: url('../svg/ar2.svg');
+}
+
+.choices[data-type*=select-one]:hover:after {
+    background-image: url('../svg/ar2.svg');
+}
+
+.gal-choices[data-type*=select-one].is-open:after {
+    margin-top: 0;
+    transform: rotate(180deg) translateY(6px);
+    background-image: url('../svg/select-arrow.svg');
+}
+
+.gal-choices[data-type*=select-one]:hover:after {
+    background-image: url('../svg/select-arrow.svg');
+}
+
+.gal-choices.choices[data-type*=select-one]:after {
+    top: 50%;
+    right: 15px;
+}

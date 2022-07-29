@@ -1,0 +1,113 @@
+.gal-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.gal-slide {
+    height: 350px;
+    cursor: pointer;
+}
+
+.gal-slide:focus-visible:not(:active):not(:hover)::before {
+    border-color: var(--violet-color-acc);
+}
+
+.gal-slide:hover::after {
+    opacity: 1;
+}
+
+.gal-slide::before,
+.gal-slide::after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.gal-slide:active::before {
+    border-color: #D1A9F0;
+    border-width: 2px;
+    background-color: rgba(194, 131, 243, 0.4);
+}
+
+.gal-slide::before {
+    content: "";
+    z-index: 1;
+    display: block;
+    padding-top: calc(100% - 6px);
+    box-sizing: border-box;
+    transition-property: border-color, background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: .15s;
+    border: 3px solid transparent;
+}
+
+.gal-slide::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position: center;
+    background-clip: content-box;
+    transition: opacity .3s ease;
+    background-image: url('../svg/gal-hover.svg');
+}
+
+.gal-content {
+    position: absolute;
+    height: 400px;
+    width: 100%;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+}
+
+.gal-swiper-nav {
+    display: flex;
+    width: 133px;
+    justify-content: space-between;
+    margin-bottom: 26px;
+}
+
+.pag {
+    font-size: 16px;
+    line-height: 32px;
+    color: #fff;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    width: auto;
+}
+
+.swiper-button-disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
+.swiper-button-disabled path {
+    fill: #ECECEC;
+}
+
+.swiper-button-disabled .gal-icn-round {
+    stroke: #ECECEC
+    /* opacity: 0.2; */
+}
+
+.swiper-button-disabled .gal-icn-point {
+    stroke: #CACACA;
+}

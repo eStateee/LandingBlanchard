@@ -1,0 +1,114 @@
+:root {
+    --dark-violet-color: #9D5CD0;
+    --violet-color: #C283F3;
+    --violet-color-acc: #7943A4;
+    --black-color: #333;
+}
+
+
+/*! FONTS */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+    font-family: 'open-sans';
+    src: url('../fonts/OpenSans-Bold.woff2');
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'open-sans';
+    src: url('../fonts/OpenSans-SemiBold.woff2');
+    font-style: normal;
+    font-display: swap;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'open-sans';
+    src: url('../fonts/OpenSans-Regular.woff2');
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'open-sans-italic';
+    src: url('../fonts/OpenSans-Italic.woff2');
+    font-style: italic;
+    font-display: swap;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.semi-bold {
+    font-weight: 600;
+}
+
+.reg {
+    font-weight: 400;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'open-sans', sans-serif;
+}
+
+.btn-reset {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1600px;
+    padding-left: 160px;
+    padding-right: 160px;
+    margin: 0 auto;
+}
+
+.ul-reset {
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.text-reset {
+    padding: 0;
+    margin: 0;
+}
+
+.link-reset {
+    color: #fff;
+    text-decoration: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+*:focus-visible {
+    outline: 0;
+}
+
+*:focus {
+    outline: 0;
+}

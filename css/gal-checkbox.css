@@ -1,0 +1,61 @@
+.gal-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.gal-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    transition-property: color, border-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: .15s;
+}
+
+.gal-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #fff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    margin-right: 12px;
+    transition-property: color, border-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: .15s;
+}
+
+.gal-checkbox:checked+label::before {
+    background-color: transparent;
+    background-image: url("../svg/gal-checkbox.svg");
+    background-size: 4px 4px;
+    border-color: #C283F3;
+}
+
+.checkbox:hover .gal-checkbox+label {
+    color: #C283F3;
+}
+
+.checkbox:hover .gal-checkbox+label::before {
+    border-color: #C283F3;
+}
+
+.gal-checkbox:focus-visible:not(:active):not(:checked)+label {
+    color: #C283F3;
+}
+
+.gal-checkbox:focus-visible:not(:active):not(:checked)+label::before {
+    border-color: #C283F3;
+}
+
+.gal-text {
+    color: #fff;
+    font-size: 16px;
+    line-height: 32px;
+}

@@ -1,0 +1,237 @@
+.hero-choices {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    box-sizing: border-box;
+    padding: 20px;
+    background: black;
+}
+
+.active-hero-choices {
+    opacity: 1;
+    visibility: visible;
+    top: 70px;
+    width: 300px;
+    border: none;
+    border-radius: 0;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-choices__item--choice1-1 {
+    background-image: url('../img/s1-1.png');
+}
+
+.hero-choices__item--choice1-2 {
+    background-image: url('../img/s1-2.png');
+}
+
+.hero-choices__item--choice1-3 {
+    background-image: url('../img/s1-3.png');
+}
+
+.hero-choices__item--choice1-4 {
+    background-image: url('../img/s1-4.png');
+}
+
+
+/* 2 */
+
+.hero-choices__item--choice2-1 {
+    background-image: url('../img/s2-1.png');
+}
+
+.hero-choices__item--choice2-2 {
+    background-image: url('../img/s2-2.png');
+}
+
+.hero-choices__item--choice2-3 {
+    background-image: url('../img/s2-3.png');
+}
+
+.hero-choices__item--choice2-4 {
+    background-image: url('../img/s2-4.png');
+}
+
+
+/* 3 */
+
+.hero-choices__item--choice3-1 {
+    background-image: url('../img/s3-1.png');
+}
+
+.hero-choices__item--choice3-2 {
+    background-image: url('../img/s3-2.png');
+}
+
+.hero-choices__item--choice3-3 {
+    background-image: url('../img/s3-3.png');
+}
+
+.hero-choices__item--choice3-4 {
+    background-image: url('../img/s3-4.png');
+}
+
+
+/* 4 */
+
+.hero-choices__item--choice4-1 {
+    background-image: url('../img/s4-1.png');
+}
+
+.hero-choices__item--choice4-2 {
+    background-image: url('../img/s4-2.png');
+}
+
+.hero-choices__item--choice4-3 {
+    background-image: url('../img/s4-3.png');
+}
+
+.hero-choices__item--choice4-4 {
+    background-image: url('../img/s4-4.png');
+}
+
+
+/* 5 */
+
+.hero-choices__item--choice5-1 {
+    background-image: url('../img/s5-1.png');
+}
+
+.hero-choices__item--choice5-2 {
+    background-image: url('../img/s5-2.png');
+}
+
+.hero-choices__item--choice5-3 {
+    background-image: url('../img/s5-3.png');
+}
+
+.hero-choices__item--choice5-4 {
+    background-image: url('../img/s5-4.png');
+}
+
+.hero__li {
+    margin-right: 100px;
+    transition: background .15s ease-in-out;
+}
+
+.form-li {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.active-btn {
+    color: var(--dark-violet-color);
+}
+
+.active-btn.drop__btn:after {
+    transform-origin: bottom;
+    transform: rotate(-45deg) translateY(10px);
+    margin-left: 1px;
+    margin-top: 4px;
+}
+
+.drop__btn {
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 25px;
+    transition-property: color, background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: .15s;
+}
+
+.drop__btn:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-color: #D1A9F0;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    margin-left: 4px;
+    margin-top: 8px;
+    transform: rotate(135deg);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.drop__btn:hover {
+    color: var(--dark-violet-color);
+}
+
+.drop__btn:active {
+    color: var(--violet-color-acc);
+}
+
+.hero__li:focus-visible:not(:hover) {
+    background: var(--violet-color-acc);
+    color: #fff;
+}
+
+.choices-1 {
+    width: 88px;
+}
+
+.choices-2 {
+    width: 157px;
+}
+
+.choices-3 {
+    width: 196px;
+}
+
+.choices-4 {
+    width: 97px;
+}
+
+.choices-5 {
+    width: 100px;
+}
+
+.hero-choices__item {
+    color: #fff;
+    font-size: 14px;
+    line-height: 19px;
+    position: relative;
+    width: 220px;
+    height: 40px;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    background-size: cover;
+    padding-left: 15px;
+    cursor: pointer;
+    z-index: 2;
+    transition: border-color .3s ease;
+}
+
+.hero-choices__item:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
+    transition: opacity .3s ease;
+}
+
+.hero-choices__item:hover,
+.hero-choices__item:focus-visible:not(:active):not(:hover) {
+    border-color: var(--dark-violet-color);
+}
+
+.hero-choices__item:active:after {
+    opacity: 1;
+}
+
+.hero-choices__item:active {
+    border-color: #D1A9F0;
+}
